@@ -9,14 +9,14 @@ HEADER = {
 }
 
 PROXYPOOL_CONFIG = {
-    'MIN_IP_NUM': 1000,  # 代理池中最小可用ip数量，若检测到小于此数量，启动爬虫
-    'DELETE_TIME': 24 * 60,  # minutes, 删除该时间之前的ip
-    'UPDATE_TIME': 10,  # minutes, 更新该时间之前的ip
-    'CRAWL_TIME': 30  # minutes, 计算可用ip数量时取该时间之内
+    'MIN_IP_NUM': 20,  # 代理池中最小可用ip数量，若检测到小于此数量，启动爬虫
+    'DELETE_TIME': 1,  # minutes, 删除该时间之前的ip
+    'UPDATE_TIME': 1,  # minutes, 更新该时间之前的ip
+    'CRAWL_TIME': 3  # minutes, 计算可用ip数量时取该时间之内
 }
 
 API_CONFIG = {
-    'PORT': 8000
+    'PORT': 9999
 }
 
 CRAWLER_CONFIG = {
@@ -26,10 +26,10 @@ CRAWLER_CONFIG = {
 }
 
 VALIDATE_CONFIG = {
-    'THREAD_NUM': 1000,
+    'THREAD_NUM': 100,
     'TIMEOUT': 20,
     'PROXY_TYPE': [0, 1, 2, 3],
-    'TARGET': 'http://proxy.mimvp.com/check.php',
+    'TARGET': 'http://ifconfig.io/ip',
     # 'TARGET1': 'http://7xr8ng.com1.z0.glb.clouddn.com/a.txt',
     # 'TARGET2': 'http://www.stilllistener.com/checkpoint1/test11/'
 }
